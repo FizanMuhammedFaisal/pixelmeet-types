@@ -1,0 +1,38 @@
+{
+    "name": "@pixelmeet/types",
+    "version": "0.1.0",
+    "description": "Shared types and constants for PixelMeet services",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "clean": "rm -rf dist",
+        "lint": "biome check src",
+        "lint:fix": "biome check --write src",
+        "prepublishOnly": "pnpm run clean && pnpm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pixelmeet/backend.git",
+        "directory": "libs/shared/types"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.3.8",
+        "@tsconfig/node22": "^22.0.5",
+        "typescript": "^5.9.3"
+    }
+}
