@@ -10,13 +10,13 @@ export const HTTP_STATUS = {
 	INTERNAL_SERVER_ERROR: 500,
 } as const
 
-export type HttpStatus = (typeof HTTP_STATUS)[keyof typeof HTTP_STATUS]
+export type HTTP_STATUS = (typeof HTTP_STATUS)[keyof typeof HTTP_STATUS]
 
-export const SUCCESS_MESSAGES = {
-	SUCCESS: 'Operation successful',
+export const SUCESS_MESSAGES = {
+	SUCESS: 'Operation successful',
 	CREATED: 'Resource created successfully',
 	UPDATED: 'Resource updated successfully',
 	DELETED: 'Resource deleted successfully',
 } as const
 
-export type SuccessMessage = (typeof SUCCESS_MESSAGES)[keyof typeof SUCCESS_MESSAGES]
+export type SucessMessage = (typeof SUCESS_MESSAGES)[keyof typeof SUCESS_MESSAGES]
